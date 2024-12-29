@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="Dim_Grey">#696969</color>
+    <color name="Imperial_Red">#ed2939</color>
 </resources>
