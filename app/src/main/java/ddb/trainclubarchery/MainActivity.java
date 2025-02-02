@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnScores;
     public static final String TAG = "MainActivity";
 
+    TCADataSource dataSource;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         initButtons();
+
+        //dataSource = new TCADataSource(this, 0); // 0 => no pre-loaded names
+        dataSource = new TCADataSource(this, 1); // 1 => pre-loaded names
+
+        dataSource.open(true); // true means refresh
+        //dataSource.open(); // this will open the current database not refreshing.
+
+
     }
 
     private void initButtons()
